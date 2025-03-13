@@ -1,26 +1,45 @@
 @font-face {
-    font-family: "Porter Sans Block";
-    src: url(..assets/fonts/porter-sans-inline-block-webfont);
-}
+    font-family: 'PorterSans';
+    src: url(../assets/fonts/porter_sans_block/porter_sans_block/porter-sans-inline-block-webfont.woff);
+  }
+
 
 body{
-    font-family: "Raleway";
-    src: url(..assets/fonts/Raleway);
+    font-family: 'Poppins';
+    margin: 0;
+    
 }
 
-.localFont {
+header{
+    height: 100vh;
+}
+
+h1{
     font-family: "Porter Sans Block";
     font-size: 20px;
     color: rgb(204, 46, 46);
     margin-top: 500px;
 }
 
+.na-a{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+   
+}
+
+.container{
+    display: flex;
+    /* justify-content: baseline; */
+}
+
 .heroImg{
     height: 720px;
     width: 100%;
     background-color: rgb(150, 149, 149);
-    display: block;
-    position: fixed;
+    /* display: flex; */
+     flex-direction: column;
+    position: fixed; 
 }
 
 .navBar{
@@ -29,9 +48,17 @@ body{
     width: 90%;
     top: 2.5%;
     left: 2.5%;
-    /* margin: -128px -138.5px; half of the size in Google Chrome */
+    display: flex;
+    justify-content: baseline;
     background: #f0f0fd;
     background: rgba(240,240,253,0.90);
     padding: 22px 32px;
     border-radius: 24px 24px 24px 24px;
+}
+
+.img1{
+   margin-top: 90%;
+    height: 609px;
+    width: 649px;
+    background: rgba(240,240,253,0.90);
 }
