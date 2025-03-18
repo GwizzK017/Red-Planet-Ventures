@@ -1,64 +1,301 @@
 @font-face {
     font-family: 'PorterSans';
-    src: url(../assets/fonts/porter_sans_block/porter_sans_block/porter-sans-inline-block-webfont.woff);
+    src: url(../assets\fonts\porter_sans_block\porter-sans-inline-block-webfont.woff);
   }
 
 
 body{
-    font-family: 'Poppins';
     margin: 0;
-    
 }
 
 header{
     height: 100vh;
+    margin: 0;
 }
 
-h1{
-    font-family: "Porter Sans Block";
-    font-size: 20px;
-    color: rgb(204, 46, 46);
-    margin-top: 500px;
+.homeHeader{
+    background-image: url(../assets/img/homePageHeader.png);
+    background-size: cover;
+    padding: 1.5em;
 }
 
-.na-a{
+.logo{
+    padding: 0;
+    /* margin-right: auto;  */
+}
+
+nav{
+    height: 100px;
+margin-top: 1.5em;
+padding: 1em;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+background-color: #f0f0fd59;
+border-radius: 24px 24px 24px 24px;
+}
+
+.menuRow{
+display: flex;
+flex-direction: row;
+padding: 0;
+justify-content: center;
+margin-left: auto;
+align-items: stretch;    
+align-self: center;
+align-content: center;
+/* color: #000000; */
+font-size: 20px;
+font-weight: 400;
+
+}
+
+.menuRow p{
+margin-bottom: 0;
+padding: 0 2em;
+justify-content: center;
+align-items: center;
+align-self: center;
+align-content: center;
+color: black;
+}
+
+.searchBar{
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+.heroText{
     display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-   
-}
-
-.container{
-    display: flex;
-    /* justify-content: baseline; */
-}
-
-.heroImg{
-    height: 720px;
-    width: 100%;
-    background-color: rgb(150, 149, 149);
-    /* display: flex; */
      flex-direction: column;
-    position: fixed; 
+    justify-content: flex-end;
+   height: 80vh;
+   align-self: flex-end;
+   padding: 0;
+   margin-left: 2em;
+   font-family: 'PorterSans';
+
 }
 
-.navBar{
-    position: absolute;
-    height: 8%;
-    width: 90%;
-    top: 2.5%;
-    left: 2.5%;
+#rpv{
+   font-family: 'PorterSans';
+    font-weight: 600;
+    color: rgb(204, 46, 46);
+}
+
+/*feature trip*/
+
+.featuredTrip{
     display: flex;
-    justify-content: baseline;
-    background: #f0f0fd;
-    background: rgba(240,240,253,0.90);
-    padding: 22px 32px;
-    border-radius: 24px 24px 24px 24px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5em;
+    background-color: rgb(59, 4, 59);
 }
 
 .img1{
-   margin-top: 90%;
-    height: 609px;
-    width: 649px;
-    background: rgba(240,240,253,0.90);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    width: 660px;
+    background-image: url(../assets/img/marsSliderClipped1.png);
+    background-size: cover;
+}
+
+.arrows{
+    display: flex;
+    gap: 500px;
+}
+
+.txt1{
+    max-width: 40%;
+    text-align: left;
+    font-size: 32px;
+    color: #fff;
+}
+
+.txt1 h2{
+    color: (59, 4, 59);
+    font-weight: 800;
+    font-size: 50px;
+}
+
+.txt1 h3{
+    color: rgb(0, 187, 255);
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .featuredTrip {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .txt1 {
+        max-width: 100%;
+    }
+}
+
+
+button {
+    background-color: crimson;
+    color: #fff;
+    height: 70px;
+    width: 200px;
+    font-size: 20px;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    margin-top: 2em;
+}
+
+
+button:hover {
+    background-color: darkred;
+}
+
+/*shuttles*/
+
+.shuttles{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5em;
+}
+
+.img2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    width: 940px;
+    margin-left: 20em;
+    background-image: url(../assets/img/spacSchuttles.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.txt2{
+    max-width: 40%;
+    text-align: left;
+    font-size: 32px;
+    color: #000000;
+    margin-left: 2em;
+}
+
+.txt2 h2{
+    color: rgb(59, 4, 59);
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.txt2 h3{
+    color: rgb(0, 187, 255);
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .shuttles {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .txt2 {
+        max-width: 100%;
+    }
+}
+
+
+/*upcoming trips*/
+
+.upcomingTrips{
+    background-color: rgb(59, 4, 59);
+    display: flex;
+    flex-direction: column; /* Stack txt3 and planets vertically */
+    align-items: center;
+    padding: 5em;
+    text-align: center;
+   
+}
+
+.txt3{
+    max-width: 40%;
+    text-align: center;
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 2em;
+}
+
+.txt3 h2{
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.txt3 h3{
+    color: rgb(0, 187, 255);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .shuttles {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .txt3 {
+        max-width: 100%;
+    }
+}
+
+.planets {
+    display: flex;
+    justify-content: center; /* Center items */
+    gap: 8em; /* Add space between items */
+    /* flex-wrap: wrap; Wrap items on smaller screens */
+    max-width: 1000px;
+    
+  
+}
+
+.planets > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+    text-align: center;
+}
+
+.planets img {
+    margin-bottom: 0.5em;
+    
+}
+
+/* Ensures the paragraphs don’t stretch too much */
+.planets p {
+    color: #fff;
+    margin-top: 0.5em;
+}
+
+@media (max-width: 768px) {
+    .txt3 {
+        max-width: 100%;
+    }
+
+    .planets {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+}
+
+.planets button{
+
+
 }
