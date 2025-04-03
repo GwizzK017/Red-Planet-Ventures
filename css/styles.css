@@ -902,6 +902,515 @@ h1{
 }
 
 
+/*JupiterXP*/
+
+.marsXP{
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers the section itself */
+    gap: 2.5em; /* Creates space between image and text */
+    padding: 5em 5em; /* Adds padding for balance */
+    /* max-width: 1200px;  */
+    margin: 0 auto; /* Centers the section horizontally */
+}
+
+.marsImg{
+    width: 500px;  
+     height: auto; 
+    /* margin-right: auto; */
+    margin-left: auto;
+    padding: auto; 
+}
+
+.marsTxt{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    height: auto;
+    position: relative;
+   top: -10px;  /* Moves the section up slightly */
+}
+
+
+.marsTxt h2{
+    font-weight: 800;
+    color: #000;
+}
+
+.marsTxt p{
+    color: #5a5959;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3.5em;
+}
+
+#marsTxt p{
+    color: #000;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.price {
+    display: flex;
+    
+    align-items: center;
+    gap: 1em; /* Space between price and strikethrough price */
+    font-size: 1.2em;
+}
+
+.price strike {
+    color: #888;
+    font-size: 0.9em;
+}
+
+
+.stars{
+    display: flex;
+    align-items: center;
+    gap: 0.5em; 
+    padding-bottom: 1em;
+}
+
+.stars p{
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.fa-star, .fa-star-half{
+    color: rgb(223, 226, 10);
+}
+
+
+.marsTxt .booking {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3em;
+    padding-top: 2em;
+    /* margin-top: 1em; */
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    /* overflow: hidden; */
+    background-color: rgb(59, 4, 59);
+    border-radius: 10px;
+}
+
+.quantity button {
+    background-color: rgb(59, 4, 59);
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.quantity input {
+    width: 60px;
+    height: 70px;
+    text-align: center;
+    border: none;
+    border-radius: 10px ;
+    border-style: none;
+    font-size: 1.2em;
+    background-color: rgb(59, 4, 59);
+    color: #fff;
+}
+
+.quantity button:hover {
+    background-color: rgb(59, 4, 59);
+}
+
+.marsTxt button {
+    background-color: crimson;
+    color: white;
+    border: none;
+    /* padding: 0.7em 1.5em; */
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.booking button{
+    margin: 0;
+}
+
+.marsTxt button:hover {
+    background-color: darkred;
+}
+
+.marsTxt hr{
+    margin-top: 3em;
+}
+
+.shuttleDates{
+    display: flex;
+    flex-direction: row;
+}
+
+.shuttleDates p{
+    font-weight: 300;
+    font-style: normal;
+    color: #9e9494;
+}
+
+
+
+/*SaturnXP*/
+
+.neptuneXP{
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers the section itself */
+    gap: 2.5em; /* Creates space between image and text */
+    padding: 5em 5em; /* Adds padding for balance */
+    /* max-width: 1200px;  */
+    margin: 0 auto; /* Centers the section horizontally */
+    background-color: #490d65;
+}
+
+.neptuneImg{
+    width: 500px;  
+     height: auto; 
+    /* margin-right: auto; */
+    margin-left: auto;
+    padding: auto; 
+}
+
+.neptuneTxt{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    height: auto;
+    position: relative;
+   top: -10px;  /* Moves the section up slightly */
+}
+
+
+.neptuneTxt h2{
+    font-weight: 800;
+    color: #fff;
+}
+
+.neptuneTxt p{
+    color: aqua;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3.5em;
+}
+
+#neptuneTxt p{
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+  .price {
+    display: flex;
+    color: #5a5959;
+    align-items: center;
+    gap: 1em; /* Space between price and strikethrough price */
+    font-size: 1.2em;
+}
+
+.price strike {
+    color: #888;
+    font-size: 0.9em;
+}
+
+
+.stars{
+    display: flex;
+    align-items: center;
+    gap: 0.5em; 
+    padding-bottom: 1em;
+}
+
+.neptuneTxt .stars p{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: #a9a3a3;
+    font-weight: 300;
+}
+
+.fa-star, .fa-star-half{
+    color: rgb(223, 226, 10);
+}
+
+
+.neptuneTxt .booking {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3em;
+    padding-top: 2em;
+    /* margin-top: 1em; */
+}
+
+.neptuneTxt .quantity {
+    display: flex;
+    align-items: center;
+    /* overflow: hidden; */
+    background-color: aqua;
+    border-radius: 10px;
+    
+}
+
+.neptuneTxt .quantity button {
+    background-color: aqua;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-size: 1.2em;
+    
+}
+
+.neptuneTxt .quantity input {
+    width: 60px;
+    height: 70px;
+    text-align: center;
+    border: none;
+    border-radius: 10px ;
+    border-style: none;
+    font-size: 1.2em;
+    background-color: aqua;
+    color: #fff;
+    font-weight: 700;
+}
+
+.neptuneTxt.quantity button:hover {
+    background-color: rgb(59, 4, 59);
+}
+
+.neptuneTxt button {
+    background-color: crimson;
+    color: white;
+    border: none;
+    /* padding: 0.7em 1.5em; */
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.booking button{
+    margin: 0;
+}
+
+.neptuneTxt button:hover {
+    background-color: darkred;
+}
+
+.neptuneTxt hr{
+    margin-top: 3em;
+}
+
+.shuttleDates{
+    display: flex;
+    flex-direction: row;
+}
+
+.shuttleDates p{
+    font-weight: 300;
+    font-style: normal;
+    color: #b0afaf;
+}
+
+/*UranusXP*/
+
+
+
+/*MoonXP*/
+
+.neptuneXP{
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers the section itself */
+    gap: 2.5em; /* Creates space between image and text */
+    padding: 5em 5em; /* Adds padding for balance */
+    /* max-width: 1200px;  */
+    margin: 0 auto; /* Centers the section horizontally */
+    background-color: #490d65;
+}
+
+.neptuneImg{
+    width: 500px;  
+     height: auto; 
+    /* margin-right: auto; */
+    margin-left: auto;
+    padding: auto; 
+}
+
+.neptuneTxt{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    height: auto;
+    position: relative;
+   top: -10px;  /* Moves the section up slightly */
+}
+
+
+.neptuneTxt h2{
+    font-weight: 800;
+    color: #fff;
+}
+
+.neptuneTxt p{
+    color: aqua;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3.5em;
+}
+
+#neptuneTxt p{
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+  .price {
+    display: flex;
+    color: #5a5959;
+    align-items: center;
+    gap: 1em; /* Space between price and strikethrough price */
+    font-size: 1.2em;
+}
+
+.price strike {
+    color: #888;
+    font-size: 0.9em;
+}
+
+
+.stars{
+    display: flex;
+    align-items: center;
+    gap: 0.5em; 
+    padding-bottom: 1em;
+}
+
+.neptuneTxt .stars p{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: #a9a3a3;
+    font-weight: 300;
+}
+
+.fa-star, .fa-star-half{
+    color: rgb(223, 226, 10);
+}
+
+
+.neptuneTxt .booking {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3em;
+    padding-top: 2em;
+    /* margin-top: 1em; */
+}
+
+.neptuneTxt .quantity {
+    display: flex;
+    align-items: center;
+    /* overflow: hidden; */
+    background-color: aqua;
+    border-radius: 10px;
+    
+}
+
+.neptuneTxt .quantity button {
+    background-color: aqua;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-size: 1.2em;
+    
+}
+
+.neptuneTxt .quantity input {
+    width: 60px;
+    height: 70px;
+    text-align: center;
+    border: none;
+    border-radius: 10px ;
+    border-style: none;
+    font-size: 1.2em;
+    background-color: aqua;
+    color: #fff;
+    font-weight: 700;
+}
+
+.neptuneTxt.quantity button:hover {
+    background-color: rgb(59, 4, 59);
+}
+
+.neptuneTxt button {
+    background-color: crimson;
+    color: white;
+    border: none;
+    /* padding: 0.7em 1.5em; */
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.booking button{
+    margin: 0;
+}
+
+.neptuneTxt button:hover {
+    background-color: darkred;
+}
+
+.neptuneTxt hr{
+    margin-top: 3em;
+}
+
+.shuttleDates{
+    display: flex;
+    flex-direction: row;
+}
+
+.shuttleDates p{
+    font-weight: 300;
+    font-style: normal;
+    color: #b0afaf;
+}
+
+.cartBtn{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.cartBtn button{
+    background-color: rgb(170, 9, 9);
+    width: 280px;
+}
+
 
 
 
@@ -939,4 +1448,5 @@ h1{
     justify-content: center;
     align-items: center;
 }
+
 
