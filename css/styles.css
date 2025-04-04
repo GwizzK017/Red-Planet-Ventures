@@ -321,7 +321,7 @@ text-decoration: none;
 #rpv{
     font-family: 'PorterSans';
     font-weight: 600;
-    font-size: 55px;
+    font-size: 50px;
     color: rgb(204, 46, 46);
     text-align: left;
     margin: 0;
@@ -420,7 +420,7 @@ text-decoration: none;
   .arrows {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 2.5%;
     width: 100%;
     display: flex;
     justify-content: space-between;
