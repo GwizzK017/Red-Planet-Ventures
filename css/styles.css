@@ -129,7 +129,9 @@ header{
 .homeHeader{
     background-image: url(../assets/img/homePageHeader.png);
     background-size: cover;
-    padding: 1.5em;
+    padding: 3em;
+    padding-left: 5em;
+    padding-right: 5em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -138,18 +140,17 @@ header{
 
 .logo{
     padding: 0;
-    /* margin-right: auto;  */
+    margin-right: auto; 
 }
 
 nav{
     height: 100px;
-margin-top: 1.5em;
 padding: 1em;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-background-color: #f0f0fd59;
+background-color: #f0f0fda8;
 border-radius: 24px 24px 24px 24px;
 }
 
@@ -165,7 +166,7 @@ align-content: center;
 /* color: #000000; */
 font-size: 20px;
 font-weight: 400;
-
+text-decoration: none;
 }
 
 .menuRow p{
@@ -175,14 +176,121 @@ justify-content: center;
 align-items: center;
 align-self: center;
 align-content: center;
-color: black;
+color: #5a5959;
+text-decoration: none;
 }
 
-.searchBar{
+.menuRow a :hover{
+    color: #000;
+    font-weight: 600;
+}
+
+.menuRow a{
+    text-decoration: none;
+}
+
+.menuRow a.active p {
+    color: red;
+    font-weight: 700;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  .searchBar {
     margin-left: auto;
     margin-right: auto;
-    height: 500px;
-    margin-top: 30em;
+    /* margin-top: 29em; */
+}
+
+.input-group {
+    border: 2px none #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.form-control {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    width: 250px;
+}
+
+.input-group-text {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    color: #888;
+    cursor: pointer;
+    padding: 0.5em;
+}
+
+.fa-basket-shopping {
+    color: #000;
+    font-size: 1.2em;
+}
+
+.fa-magnifying-glass{
+    color: #888;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartAmt{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: crimson;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+/* .homeHeader2 .cartAmt{
+    position: absolute;
+    top: 65px;
+    right: 255px;
+    background-color: crimson;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+} */
+
+.homeHeader2 .cartAmt, .homeHeader3 .cartAmt{
+    position: absolute;
+    top: 65px;
+    right: 245px;
+    background-color: crimson;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.cartAmt p{
+    margin: 0;
+    font-weight: bold;
 }
 
 
@@ -199,20 +307,21 @@ color: black;
     flex-direction: column;
    justify-content: flex-start;
    text-align: left;
-   padding: ;
+   /* padding: ; */
 }
 
 .heroTextspace h3{
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     font-style: normal;
-    color: rgb(59, 4, 59);
+    color: #490d65;
     padding-bottom: 1em;
 }
 
 #rpv{
     font-family: 'PorterSans';
     font-weight: 600;
+    font-size: 55px;
     color: rgb(204, 46, 46);
     text-align: left;
     margin: 0;
@@ -230,10 +339,10 @@ color: black;
     align-items: center;
     justify-content: space-between;
     padding: 5em;
-    background-color: rgb(59, 4, 59);
+    background-color: #490d65;
 }
 
-.img1{
+/* .img1{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -241,12 +350,122 @@ color: black;
     width: 660px;
     background-image: url(../assets/img/marsSliderClipped1.png);
     background-size: cover;
-}
 
-.arrows{
+} */
+
+.slider {
+    position: relative;
+    width: 660px;
+    height: 700px;
+    margin: auto;
+    overflow: hidden;
+    z-index: 10;
+  }
+  
+  .slider-viewport {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  .slides {
+    display: flex;
+    width: calc(660px * 4); 
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .img {
+    flex: 0 0 660px;
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Individual Slides */
+  .img1 {
+    background-image: url(../assets/img/marsSliderClipped1.png);
+  }
+  .imgTwo {
+    background-image: url(../assets/img/marsSliderClipped2.png);
+  }
+  .img3 {
+  
+    background-image: url(../assets/img/marsSliderClipped3.png);
+  }
+  .img4 {
+    background-image: url(../assets/img/marsSliderClipped14.png);
+  }
+  
+  /* Slide Transitions */
+  #slide1:checked ~ .slider-viewport .slides {
+    transform: translateX(0%);
+  }
+  #slide2:checked ~ .slider-viewport .slides {
+    transform: translateX(-660px);
+  }
+  #slide3:checked ~ .slider-viewport .slides {
+    transform: translateX(-1320px);
+  }
+  #slide4:checked ~ .slider-viewport .slides {
+    transform: translateX(-1980px);
+  }
+  
+  /* Arrows */
+  .arrows {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 20;
+    pointer-events: none;
+  }
+  
+  .arrow {
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    pointer-events: all;
+    opacity: 0.8;
+  }
+  
+  .arrow.left {
+    background-image: url(../assets/img/arrowLeftWhite.png);
+  }
+  .arrow.right {
+    background-image: url(../assets/img/arrowRightWhite.png);
+  }
+  
+  .arrow {
+    display: none;
+  }
+  
+  /* Show correct arrows for current slide */
+  #slide1:checked ~ .arrows #left1,
+  #slide1:checked ~ .arrows #right1,
+  #slide2:checked ~ .arrows #left2,
+  #slide2:checked ~ .arrows #right2,
+  #slide3:checked ~ .arrows #left3,
+  #slide3:checked ~ .arrows #right3,
+  #slide4:checked ~ .arrows #left4,
+  #slide4:checked ~ .arrows #right4 {
+    display: block;
+  }
+
+/* .arrows{
     display: flex;
     gap: 500px;
-}
+} */
 
 .txt1{
     max-width: 40%;
@@ -286,7 +505,7 @@ button {
     width: 200px;
     font-size: 20px;
     border: none;
-    border-radius: 35px;
+    border-radius: 8px;
     cursor: pointer;
     margin-top: 2em;
 }
@@ -326,7 +545,7 @@ button:hover {
 }
 
 .txt2 h2{
-    color: rgb(59, 4, 59);
+    color: #490d65;
     font-weight: 700;
     font-size: 50px;
 }
@@ -352,7 +571,7 @@ button:hover {
 /*upcoming trips*/
 
 .upcomingTrips{
-    background-color: rgb(59, 4, 59);
+    background-color: #490d65;
     display: flex;
     flex-direction: column; /* Stack txt3 and planets vertically */
     align-items: center;
@@ -438,9 +657,9 @@ button:hover {
     margin-right: auto;
 }
 
-#homeBookbtn :hover{
+/* #homeBookbtn :hover{
     
-}
+} */
 
 
 /*footer*/
@@ -468,6 +687,7 @@ footer .logo{
  footer .icons{
     display: flex;
     gap: 1em;
+    margin-left: auto;
 }
 
 footer p{
@@ -477,12 +697,14 @@ footer p{
 .company {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
+    margin-right: auto;
     gap: 0.5em; /* Adds space between links */
 }
 
 .company :hover{
-    color: rgb(59, 4, 59);
+    color: #490d65;
     font-weight: 800;
 }
 
@@ -511,16 +733,27 @@ footer a {
     position: relative;  /* Ensures absolute children are positioned relative to this */
     background-image: url(../assets/img/headerbackBack.png);
     background-size: cover;
-    height: 30em;
+    height: 40em;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;  /* Pushes .filterBox to the bottom */
 }
 
+.homeHeader2 nav{
+  margin-top: 3em;
+  margin-left: 5em;
+  margin-right: 5em;
+
+}
+
+
 h1{
     font-family: 'PorterSans';
     font-weight: 500;
     color: #fff;
+    margin: 0;
+    font-size: 60px;
     text-align: center;
     /* padding-top: 1em; */
     display: flex;
@@ -568,6 +801,13 @@ h1{
     height: 30px;
     border: none;
     border-radius: 5px;
+    background-color: #dcdcdccc;
+    color: #490d65;
+}
+
+ #showIP{
+    width: 40px;
+    text-align: center;
 }
 
 .filter .fa-tv{
@@ -672,12 +912,12 @@ h1{
     display: flex;
     align-items: center;
     /* overflow: hidden; */
-    background-color: rgb(59, 4, 59);
+    background-color: #490d65;
     border-radius: 10px;
 }
 
 .quantity button {
-    background-color: rgb(59, 4, 59);
+    background-color: #490d65;
     border-radius: 10px;
     padding: 0.5em 1em;
     cursor: pointer;
@@ -692,12 +932,12 @@ h1{
     border-radius: 10px ;
     border-style: none;
     font-size: 1.2em;
-    background-color: rgb(59, 4, 59);
+    background-color: #490d65;
     color: #fff;
 }
 
 .quantity button:hover {
-    background-color: rgb(59, 4, 59);
+    background-color: #490d65;
 }
 
 .marsTxt button {
@@ -775,7 +1015,7 @@ h1{
 }
 
 .neptuneTxt p{
-    color: aqua;
+    color: rgb(0, 187, 255);
     font-weight: 700;
     display: flex;
     flex-direction: row;
@@ -837,13 +1077,13 @@ h1{
     display: flex;
     align-items: center;
     /* overflow: hidden; */
-    background-color: aqua;
+    background-color: rgb(0, 187, 255);
     border-radius: 10px;
     
 }
 
 .neptuneTxt .quantity button {
-    background-color: aqua;
+    background-color: rgb(0, 187, 255);
     border-radius: 10px;
     padding: 0.5em 1em;
     cursor: pointer;
@@ -859,13 +1099,13 @@ h1{
     border-radius: 10px ;
     border-style: none;
     font-size: 1.2em;
-    background-color: aqua;
+    background-color: rgb(0, 187, 255);
     color: #fff;
     font-weight: 700;
 }
 
 .neptuneTxt.quantity button:hover {
-    background-color: rgb(59, 4, 59);
+    background-color: #490d65;
 }
 
 .neptuneTxt button {
@@ -1000,12 +1240,12 @@ h1{
     display: flex;
     align-items: center;
     /* overflow: hidden; */
-    background-color: rgb(59, 4, 59);
+    background-color: #490d65;
     border-radius: 10px;
 }
 
 .quantity button {
-    background-color: rgb(59, 4, 59);
+    background-color: #490d65;
     border-radius: 10px;
     padding: 0.5em 1em;
     cursor: pointer;
@@ -1020,12 +1260,12 @@ h1{
     border-radius: 10px ;
     border-style: none;
     font-size: 1.2em;
-    background-color: rgb(59, 4, 59);
+    background-color: #490d65;
     color: #fff;
 }
 
 .quantity button:hover {
-    background-color: rgb(59, 4, 59);
+    background-color: #490d65;
 }
 
 .marsTxt button {
@@ -1103,7 +1343,7 @@ h1{
 }
 
 .neptuneTxt p{
-    color: aqua;
+    color: rgb(0, 187, 255);
     font-weight: 700;
     display: flex;
     flex-direction: row;
@@ -1165,13 +1405,13 @@ h1{
     display: flex;
     align-items: center;
     /* overflow: hidden; */
-    background-color: aqua;
+    background-color: rgb(0, 187, 255);
     border-radius: 10px;
     
 }
 
 .neptuneTxt .quantity button {
-    background-color: aqua;
+    background-color: rgb(0, 187, 255);
     border-radius: 10px;
     padding: 0.5em 1em;
     cursor: pointer;
@@ -1187,13 +1427,13 @@ h1{
     border-radius: 10px ;
     border-style: none;
     font-size: 1.2em;
-    background-color: aqua;
+    background-color: rgb(0, 187, 255);
     color: #fff;
     font-weight: 700;
 }
 
 .neptuneTxt.quantity button:hover {
-    background-color: rgb(59, 4, 59);
+    background-color: #490d65;
 }
 
 .neptuneTxt button {
@@ -1273,7 +1513,7 @@ h1{
 }
 
 .neptuneTxt p{
-    color: aqua;
+    color: rgb(0, 187, 255);
     font-weight: 700;
     display: flex;
     flex-direction: row;
@@ -1335,13 +1575,13 @@ h1{
     display: flex;
     align-items: center;
     /* overflow: hidden; */
-    background-color: aqua;
+    background-color: rgb(0, 187, 255);
     border-radius: 10px;
     
 }
 
 .neptuneTxt .quantity button {
-    background-color: aqua;
+    background-color: rgb(0, 187, 255);
     border-radius: 10px;
     padding: 0.5em 1em;
     cursor: pointer;
@@ -1357,13 +1597,13 @@ h1{
     border-radius: 10px ;
     border-style: none;
     font-size: 1.2em;
-    background-color: aqua;
+    background-color: rgb(0, 187, 255);
     color: #fff;
     font-weight: 700;
 }
 
 .neptuneTxt.quantity button:hover {
-    background-color: rgb(59, 4, 59);
+    background-color: #490d65;
 }
 
 .neptuneTxt button {
@@ -1419,11 +1659,22 @@ h1{
 .homeHeader3{
     background-image: url(../assets/img/headerbackBack.png);
     background-size: cover;
-    height: 25em;
+    height: 30em;
+    padding: 3em;
+    padding-left: 5em;
+    padding-right: 5em;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+}
+
+.homeHeader3 nav{
+
+  width: 100%;
+  margin-left: 7em;
+  margin-right: 7em;
+
 }
 
 
@@ -1434,6 +1685,7 @@ h1{
     text-align: center;
     padding-top: 2em;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -1456,7 +1708,7 @@ h1{
 }
 
 .about h3{
-    color: aqua;
+    color: rgb(0, 187, 255);
     font-size: medium;
 }
 
@@ -1505,7 +1757,7 @@ h1{
 }
 
 .info h3{
-    color: aqua;
+    color: rgb(0, 187, 255);
     font-size: larger;
    margin-bottom: 0.8em;
 }
@@ -1583,4 +1835,32 @@ label{
     }
 }
 
+/* back to top */
+
+.backToTop{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: crimson;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+}
+
+
+
+.backToTop :hover{
+    background-color: rgb(174, 10, 43);
+    transform: translate(-4px);
+}
+
+
+
+html{
+    scroll-behavior: smooth;
+}
 
