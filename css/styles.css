@@ -275,7 +275,7 @@ text-decoration: none;
 .homeHeader2 .cartAmt, .homeHeader3 .cartAmt{
     position: absolute;
     top: 65px;
-    right: 245px;
+    right: 150px;
     background-color: crimson;
     color: white;
     width: 25px;
