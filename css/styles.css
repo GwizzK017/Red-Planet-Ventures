@@ -711,91 +711,49 @@ button:hover {
 
 /*upcoming trips*/
 
-.upcomingTrips{
+.upcomingTrips {
     background-color: #490d65;
-    display: flex;
-    flex-direction: column; /* Stack txt3 and planets vertically */
-    align-items: center;
-    padding: 5em;
-    text-align: center;
-   
+    padding: 5em 0;
 }
 
-.txt3{
-    max-width: 40%;
-    text-align: center;
+.txt3 {
     font-size: 32px;
     color: #000000;
-    margin-bottom: 2em;
 }
 
-.txt3 h2{
+.txt3 h2 {
     color: rgb(255, 255, 255);
     font-weight: 700;
     font-size: 50px;
 }
 
-.txt3 h3{
+.txt3 h3 {
     color: rgb(0, 187, 255);
-    text-align: center;
-}
-
-@media (max-width: 768px) {
-    .shuttles {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .txt3 {
-        max-width: 100%;
-    }
-}
-
-.planets {
-    display: flex;
-    justify-content: center; /* Center items */
-    gap: 8em; /* Add space between items */
-    /* flex-wrap: wrap; Wrap items on smaller screens */
-    max-width: 1000px;
-    
-  
-}
-
-.planets > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 200px;
-    text-align: center;
 }
 
 .planets img {
     margin-bottom: 0.5em;
-    
+    max-width: 100%;
+    height: auto;
 }
 
-/* Ensures the paragraphs don’t stretch too much */
 .planets p {
     color: #fff;
     margin-top: 0.5em;
+    font-size: 0.95rem;
 }
 
-@media (max-width: 768px) {
-    .txt3 {
-        max-width: 100%;
-    }
-
-    .planets {
-        flex-direction: column;
-        gap: 1.5em;
-    }
+#homeBookbtn {
+    background-color: crimson;
+    border: none;
+    font-weight: bold;
+    padding: 0.75em 2em;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
 }
 
-#homeBookbtn{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+#homeBookbtn:hover {
+    background-color: darkred;
 }
 
 /* #homeBookbtn :hover{
@@ -805,68 +763,101 @@ button:hover {
 
 /*footer*/
 
-footer{
+footer {
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
+    justify-content: center; /* Center the entire block */
+    flex-wrap: wrap;
     background-color: #fff;
-    color: #000000;
+    color: #000;
     padding: 5em;
-    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
-}
-
-footer .logo{
+    gap: 4em; /* spacing between columns */
+    text-align: center;
+  }
+  
+  footer .logo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 2em;
     padding-bottom: 1em;
     margin-bottom: 2em;
-}
-
- footer .icons{
-    display: flex;
-    gap: 1em;
+    margin-right: auto;
     margin-left: auto;
-}
-
-footer p{
-    padding-top: 1em;
-}
-
-.company {
+  }
+  
+  footer .logo p {
+    margin-top: 1em;
+  }
+  
+  footer .company {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    gap: 0.5em;
     margin-right: auto;
-    gap: 0.5em; /* Adds space between links */
-}
-
-.company :hover{
+    margin-left: auto;
+  }
+  
+  footer .company a:hover {
     color: #490d65;
     font-weight: 800;
-}
-
-footer a {
+  }
+  
+  footer .socials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  footer .icons {
+    display: flex;
+    gap: 1em;
+    margin-top: 0.5em;
+  }
+  
+  footer a {
     color: #000;
     text-decoration: none;
     font-size: 1rem;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
+  }
+  
+  .footer-line {
+    width: 100%;
+    margin: 2em 0;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+  
+  .footer-bottom {
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .footer-bottom p {
+    margin: 0.3em 0;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
     footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 3em 2em;
     }
-
-    footer .logo {
-        align-items: center;
+  
+    footer .logo,
+    footer .company,
+    footer .socials {
+      align-items: center;
     }
-}
+  
+    .footer-bottom {
+      font-size: 0.85rem;
+    }
+  }
+  
 
 /*flights page*/
 
@@ -1978,7 +1969,7 @@ label{
 
 /* back to top */
 
-.backToTop{
+.backToTop {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
@@ -1988,20 +1979,19 @@ label{
     background-color: crimson;
     border-radius: 1rem;
     padding: 1rem;
+    color: #fff;
     text-decoration: none;
-    transition: 0.2s ease-out;
+    font-size: 1.2rem;
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-
-
-.backToTop :hover{
+.backToTop:hover {
     background-color: rgb(174, 10, 43);
-    transform: translate(-4px);
+    transform: translateY(-4px);
 }
 
-
-
-html{
+/* Smooth scrolling when clicking anchor links */
+html {
     scroll-behavior: smooth;
 }
-
