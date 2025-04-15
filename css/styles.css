@@ -129,6 +129,9 @@ header{
 .homeHeader{
     background-image: url(../assets/img/homePageHeader.png);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll; 
     padding: 3em;
     padding-left: 5em;
     padding-right: 5em;
@@ -137,6 +140,7 @@ header{
     justify-content: space-between;
     align-content:space-between ;
 }
+
 
 .logo{
     padding: 0;
@@ -256,38 +260,6 @@ text-decoration: none;
     z-index: 5;
 }
 
-/* .homeHeader2 .cartAmt{
-    position: absolute;
-    top: 65px;
-    right: 255px;
-    background-color: crimson;
-    color: white;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 5;
-} */
-
-.homeHeader2 .cartAmt, .homeHeader3 .cartAmt{
-    position: absolute;
-    top: 65px;
-    right: 150px;
-    background-color: crimson;
-    color: white;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 5;
-}
-
 .cartAmt p{
     margin: 0;
     font-weight: bold;
@@ -329,6 +301,174 @@ text-decoration: none;
     padding-bottom: 0.5em;
     ;
 }
+
+/* Small screens: Resize logo, hide menuRow and searchBar initially */
+@media (max-width: 992px) {
+    nav {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 1em 0;
+    }
+
+    .logo img {
+        width: 180px;
+    }
+
+    .menuRow {
+        order: 2;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        margin: 1em 0;
+        padding: 0 1em;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .menuRow p {
+        padding: 0 1em;
+        font-size: 18px;
+    }
+
+    .searchBar {
+        order: 3;
+        width: 100%;
+    }
+
+    .customSearch {
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+}
+
+/* Very small screens: search bar turns into vertical sidebar-style form */
+@media (max-width: 576px) {
+    .menuRow {
+        justify-content: center;
+    }
+
+    .searchBar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255,255,255,0.9);
+        padding: 1em;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        z-index: 10;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+
+    .form-control {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .input-group-text {
+        font-size: 1em;
+    }
+
+    .cartAmt {
+        top: -5px;
+        right: -5px;
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    nav {
+      flex-direction: column;
+      height: auto;
+      padding: 1em 0;
+    }
+  
+    .logo {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      padding-bottom: 1em;
+    }
+  
+    .logo img {
+      width: 200px; /* resize logo slightly for smaller screens */
+    }
+  
+    /* .menuRow {
+      flex-direction: column;
+      margin: 0;
+      align-items: center;
+      gap: 0.5em;
+    } */
+  
+    .searchBar {
+      margin-top: 1em;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    #rpv {
+      font-size: 42px;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    #rpv {
+      font-size: 34px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    #rpv {
+      font-size: 28px;
+    }
+  }
+  
+
+
+/* .homeHeader2 .cartAmt{
+    position: absolute;
+    top: 65px;
+    right: 255px;
+    background-color: crimson;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+} */
+
+.homeHeader2 .cartAmt, .homeHeader3 .cartAmt{
+    position: absolute;
+    top: 65px;
+    right: 150px;
+    background-color: crimson;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
 
 
 
@@ -416,7 +556,7 @@ text-decoration: none;
     transform: translateX(-1980px);
   }
   
-  /* Arrows */
+
   .arrows {
     position: absolute;
     top: 50%;
