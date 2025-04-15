@@ -657,53 +657,54 @@ button:hover {
 
 /*shuttles*/
 
-.shuttles{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5em;
+.shuttles {
+    background-color: #fff;
 }
 
-.img2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.img2 {
     height: 550px;
-    width: 940px;
-    margin-left: 20em;
+    width: 100%;
+    max-width: 940px;
     background-image: url(../assets/img/spacSchuttles.png);
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
-.txt2{
-    max-width: 40%;
-    text-align: left;
+.txt2 {
     font-size: 32px;
     color: #000000;
-    margin-left: 2em;
+    margin-bottom: 2em;
 }
 
-.txt2 h2{
+.txt2 h2 {
     color: #490d65;
     font-weight: 700;
     font-size: 50px;
 }
 
-.txt2 h3{
+.txt2 h3 {
     color: rgb(0, 187, 255);
     text-align: left;
 }
 
-@media (max-width: 768px) {
-    .shuttles {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+/* Optional media tweak if needed */
+@media (max-width: 576px) {
+    .txt2 h2 {
+        font-size: 36px;
+    }
+
+    .txt2 h3 {
+        display: inline;
+        justify-content: center;
     }
 
     .txt2 {
-        max-width: 100%;
+        font-size: 20px;
+    }
+
+    .img2 {
+        height: 300px;
     }
 }
 
