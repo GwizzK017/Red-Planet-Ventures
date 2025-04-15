@@ -475,10 +475,10 @@ text-decoration: none;
 /*feature trip*/
 
 .featuredTrip{
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5em;
+    padding: 5em; */
     background-color: #490d65;
 }
 
