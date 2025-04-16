@@ -205,7 +205,12 @@ text-decoration: none;
   .searchBar {
     margin-left: auto;
     margin-right: auto;
-    /* margin-top: 29em; */
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
 }
 
 .input-group {
@@ -455,20 +460,25 @@ text-decoration: none;
 
 .homeHeader2 .cartAmt, .homeHeader3 .cartAmt{
     position: absolute;
-    top: 65px;
-    right: 150px;
+    top: -10px;
+    right: 0px;
     background-color: crimson;
     color: white;
-    width: 25px;
+    width: 25px; 
     height: 25px;
     border-radius: 50%;
-    font-size: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 5;
 }
 
+.homeHeader2 .cartAmt p, .homeHeader3 .cartAmt p{
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 1;
+}
 
 
 
@@ -862,20 +872,26 @@ footer {
 /*flights page*/
 
 .homeHeader2{
-    position: relative;  /* Ensures absolute children are positioned relative to this */
+    position: relative;
     background-image: url(../assets/img/headerbackBack.png);
     background-size: cover;
     height: 40em;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;  /* Pushes .filterBox to the bottom */
+    justify-content: space-between;
+    /* padding: 2em 4em; */
 }
 
 .homeHeader2 nav{
   margin-top: 3em;
   margin-left: 5em;
   margin-right: 5em;
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    flex-wrap: wrap;
 
 }
 
@@ -946,6 +962,114 @@ h1{
     color: crimson;
 }
 
+@media (max-width: 1024px) {
+    .homeHeader2 nav {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .menuRow {
+        justify-content: center;
+    }
+
+    .searchBar {
+        justify-content: center;
+    }
+
+    .flightTitle h1 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    .flightTitle h1 {
+        font-size: 36px;
+    }
+
+    .searchBar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cartAmt {
+        top: -10px;
+        right: -10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .flightTitle h1 {
+        font-size: 28px;
+    }
+
+    .searchBar .form-control {
+        width: 100%;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .homeHeader2 .cartAmt {
+      top: -8px;
+      right: -8px;
+    }
+  }
+
+  nav.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    .filterBox {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 1.5em 1em;
+      gap: 1em;
+    }
+  
+    .filter,
+    .filterBtns {
+      flex: 1 1 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5em;
+    }
+  
+    .filterBtns {
+      justify-content: flex-start;
+      min-width: 0;
+      flex-shrink: 1;
+    }
+  
+    .filterBox p,
+    .filterBox input {
+      font-size: 0.8rem;
+    }
+  
+    .filterBox input {
+      max-width: 70px;
+      flex-shrink: 1;
+    }
+  
+    #showIP {
+      max-width: 40px;
+    }
+  
+    .filterBtns input {
+      width: auto;
+      min-width: 50px;
+    }
+  }
+  
+
+
 /*MarsXP*/
 
 .marsXP{
@@ -964,6 +1088,14 @@ h1{
     /* margin-right: auto; */
     margin-left: auto;
     padding: auto; 
+}
+
+.marsImg img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .marsTxt{
@@ -1105,7 +1237,88 @@ h1{
     color: #9e9494;
 }
 
+@media (max-width: 1024px) {
+    .marsXP {
+        padding: 3em 2em;
+        gap: 2em;
+    }
 
+    .marsImg {
+        width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .marsXP {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 2em 1.5em;
+        gap: 2em;
+    }
+
+    .marsImg {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .marsImg img {
+        max-width: 90%;
+    }
+
+    .marsTxt {
+        width: 100%;
+        padding: 0 1em;
+        text-align: center;
+        align-items: center;
+    }
+
+    .marsTxt p {
+        justify-content: center;
+        gap: 2em;
+        flex-wrap: wrap;
+    }
+
+    .stars {
+        justify-content: center;
+    }
+
+    .booking {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .shuttleDates {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .marsImg {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .quantity input {
+        width: 50px;
+        height: 60px;
+        font-size: 1em;
+    }
+
+    .marsImg img {
+        max-width: 100%;
+    }
+
+    .marsTxt button {
+        font-size: 1em;
+    }
+
+    .price {
+        font-size: 1em;
+    }
+}
 
 /*NeptuneXP*/
 
@@ -1272,6 +1485,40 @@ h1{
     font-style: normal;
     color: #b0afaf;
 }
+
+@media screen and (max-width: 992px) {
+    .neptuneXP {
+        flex-direction: column;
+        padding: 3em 2em;
+    }
+
+    .neptuneImg img {
+        max-width: 90%;
+    }
+
+    .neptuneTxt {
+        text-align: center;
+        align-items: center;
+    }
+
+    .neptuneTxt p {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .shuttleDates {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .neptuneTxt .booking {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+    }
+}
+
 
 
 /*JupiterXP*/
