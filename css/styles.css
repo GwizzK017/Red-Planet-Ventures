@@ -1720,3 +1720,15 @@ h1{
 html {
     scroll-behavior: smooth;
 }
+
+/*About Page*/
+
+.planet-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 2px solid transparent;
+  }
+  .planet-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 15px #7209B7;
+    border-color: #E63946;
+  }
