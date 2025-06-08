@@ -46,7 +46,7 @@
                                 <i class="fa-solid fa-basket-shopping"></i>
                             </span>
                         </div>
-                        <div class="cartAmt">
+                        <div class="cartAmt cart-count">
                             <p>2</p>
                         </div>
                     </form>
@@ -117,7 +117,7 @@
         <!-- Right Column: Form -->
         <div class="col-lg-6 form ps-lg-5">
           <h2>SEND US A MESSAGE</h2>
-          <form action="contacts.html">
+          <form id="contactForm">
             <label>Your name</label>
             <input type="text" name="firstName" placeholder="Abc" required>
   
@@ -132,6 +132,9 @@
   
             <button type="submit">Submit</button>
           </form>
+          <div id="formSuccess" style="display:none; margin-top: 15px;" class="alert alert-success">
+  Your message has been sent successfully!
+</div>
         </div>
   
       </div>
@@ -144,6 +147,32 @@
     <i class="fa-solid fa-arrow-up"></i>
     
 </a>
+
+<!-- Modal checkout opener-->
+
+<div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content text-dark">
+      <div class="modal-header">
+        <h5 class="modal-title" id="checkoutModalLabel">Your Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul id="cart-items" class="list-group mb-3">
+          <!-- Items dynamically inserted here -->
+        </ul>
+        <div class="d-flex justify-content-between">
+          <h5>Total (ZAR):</h5>
+          <h5 id="cart-total">R 0</h5>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
+        <button type="button" class="btn btn-primary checkout-btn">Check Out</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- footer -->
 

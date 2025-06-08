@@ -148,7 +148,7 @@ header{
 }
 
 nav{
-    height: 100px;
+    min-height: 100px;
 padding: 1em;
 display: flex;
 flex-direction: row;
@@ -167,7 +167,7 @@ margin-left: auto;
 align-items: stretch;    
 align-self: center;
 align-content: center;
-/* color: #000000; */
+white-space: nowrap;
 font-size: 20px;
 font-weight: 400;
 text-decoration: none;
@@ -195,7 +195,7 @@ color: #5a5959;
 text-decoration: none;
 }
 
-.menuRow a :hover{
+.menuRow a:hover{
     color: #000;
     font-weight: 600;
 }
@@ -1053,6 +1053,7 @@ h1{
       flex: 1 1 auto;
       display: flex;
       flex-wrap: wrap;
+      width: 100%;
       align-items: center;
       gap: 0.5em;
     }
@@ -1139,6 +1140,10 @@ h1{
     gap: 3.5em;
 }
 
+.manual-qty{
+  color: #fff;
+}
+
 #marsTxt p{
     color: #000;
     font-family: "Poppins", sans-serif;
@@ -1219,6 +1224,10 @@ h1{
     background-color: #490d65;
 }
 
+span.mx-2{
+  color: #fff;
+}
+
 .marsTxt button {
     background-color: crimson;
     color: white;
@@ -1250,6 +1259,21 @@ h1{
     font-weight: 300;
     font-style: normal;
     color: #9e9494;
+}
+
+.trips-card {
+   float: none;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  display: block;
+  all: unset;
+  display: block;
+  transition: transform 0.2s ease-in-out;
+}
+
+.hidden {
+  display: none !important; 
 }
 
 @media (max-width: 1024px) {

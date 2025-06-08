@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Gedeon Kazadi 21100471">
 
     <title>Red Planet Ventures - Flight Page</title>
@@ -48,7 +47,7 @@
                                 <i class="fa-solid fa-basket-shopping"></i>
                             </span>
                         </div>
-                        <div class="cartAmt">
+                        <div class="cartAmt cart-count">
                             <p>2</p>
                         </div>
                     </form>
@@ -77,13 +76,40 @@
         <p>|</p> 
         <p>Showing 1-15 of 32 results</p>
 
+        <div id="filterPanel" style="display: none;" class="p-3 border rounded bg-light mt-3">
+  <div class="mb-2">
+    <label>Sort by:</label>
+    <select id="sortBy" class="form-select">
+      <option value="">-- Select --</option>
+      <option value="name">Name (A-Z)</option>
+      <option value="price">Price (Low to High)</option>
+    </select>
+  </div>
+
+  <div class="mb-2">
+    <label>Max Price (R):</label>
+    <input type="number" id="maxPrice" class="form-control" placeholder="e.g. 50000">
+  </div>
+
+  <div class="mb-2">
+    <label>Planet Region:</label>
+    <select id="regionFilter" class="form-select">
+      <option value="">-- All --</option>
+      <option value="inner">Before Asteroid Belt (Moon, Mars, Venus)</option>
+      <option value="outer">After Asteroid Belt (Jupiter, Saturn, etc.)</option>
+    </select>
+  </div>
+
+  <button id="applyFilters" class="btn btn-primary mt-2">Apply Filters</button>
+</div>
+
     </div>
 
     <div class="filterBtns">
         <p>Show</p>
-        <input type="min number" placeholder="6" id="showIP">
+        <input type="number" placeholder="6" id="showIP">
         <p>Sort by</p>
-        <input type="min number" width="300px" placeholder="Default">
+        <input type="text" width="300px" placeholder="Default">
     </div>
 
 </div>
@@ -93,8 +119,9 @@
     <!-- Book a trip -->
 
      <!-- Mars trip -->
-    <section class="marsXP">
+    <section class="marsXP trip-card" data-name="The Classic Mars Experience" data-price="25000" data-region="inner">
 
+       
         <div class="marsImg">
             <img src="../assets/img/flighhtMars.png" alt="">
         </div>
@@ -102,7 +129,7 @@
         <div class="marsTxt">
             <h2>The Classic Mars Experience</h2>
             <div class="price">
-            <p>R 25,000.00 <br> <strike>R50,000.00 </strike></R50></p>
+            <p>R 25,000.00 <br> <strike>R50,000.00</strike></p>
             </div>
 
             <div class="stars">
@@ -124,10 +151,13 @@
             </div>
 
             <div class="booking">
-                <div class="quantity">
-                    <input type="button" value="  -     1" ><input type="button" value=" +">
-                </div>
-                <button>Book Now</button>
+   <div class="quantity">
+  <input type="button" class="decrease-manual" value="-">
+  <span class="manual-qty">1</span>
+  <input type="button" class="increase-manual" value="+">
+</div>
+
+                <button class="btn btn-primary book-now-btn" data-name="Mars Adventure" data-price="25000">Book Now</button>
             </div>
 
             <hr>
@@ -151,8 +181,8 @@
 
     </section>
 
-
-    <section class="neptuneXP">
+    <!-- Neptune trip -->
+    <section class="neptuneXP trip-card" data-name="Neptune's Cosmic Dive" data-price="45000" data-region="outer">
 
         <div class="neptuneImg">
             <img src="../assets/img/flightNeptune.png" alt="">
@@ -184,10 +214,13 @@
             </div>
 
             <div class="booking">
-                <div class="quantity">
-                    <input type="button" value="  -     1" ><input type="button" value=" +">
-                </div>
-                <button>Book Now</button>
+   <div class="quantity">
+  <input type="button" class="decrease-manual" value="-">
+  <span class="manual-qty">1</span>
+  <input type="button" class="increase-manual" value="+">
+</div>
+
+                <button class="btn btn-primary book-now-btn" data-name="Neptunes Cosmic Dive" data-price="45000">Book Now</button>
             </div>
 
             <hr>
@@ -208,17 +241,18 @@
             </div>
 
         </div>
+       
 
     </section>
 
 
-
-    <section class="marsXP">
-
+    <!-- Jupiter Trip -->
+    <section class="marsXP trip-card" data-name="The Giant's Journey" data-price="65000" data-region="outer">
+    
         <div class="marsImg">
             <img src="../assets/img/flightJupiter.png" alt="">
         </div>
-
+<div class="trip-container">
         <div class="marsTxt">
             <h2>The Giant's Journey</h2>
             <div class="price">
@@ -246,9 +280,12 @@
 
             <div class="booking">
                 <div class="quantity">
-                    <input type="button" value="  -     1" ><input type="button" value=" +">
-                </div>
-                <button>Book Now</button>
+  <input type="button" class="decrease-manual" value="-">
+  <span class="manual-qty">1</span>
+  <input type="button" class="increase-manual" value="+">
+</div>
+
+                <button class="btn btn-primary book-now-btn" data-name="The Giants Journey" data-price="65000">Book Now</button>
             </div>
 
             <hr>
@@ -269,12 +306,12 @@
             </div>
 
         </div>
-
+</div>
     </section>
 
-
-    <section class="neptuneXP">
-
+    <!-- Saturn’s Trip -->
+    <section class="neptuneXP trip-card" data-name="Ring Around a Saturn" data-price="40000" data-region="outer">
+    
         <div class="neptuneImg">
             <img src="../assets/img/flightSaturn.png" alt="">
         </div>
@@ -307,9 +344,12 @@
 
             <div class="booking">
                 <div class="quantity">
-                    <input type="button" value="  -     1" ><input type="button" value=" +">
-                </div>
-                <button>Book Now</button>
+  <input type="button" class="decrease-manual" value="-">
+  <span class="manual-qty">1</span>
+  <input type="button" class="increase-manual" value="+">
+</div>
+
+                <button class="btn btn-primary book-now-btn" data-name="Ring Around Saturn" data-price="40000">Book Now</button>
             </div>
 
             <hr>
@@ -333,9 +373,13 @@
 
     </section>
 
+    <!-- Uranus trip -->
+    <section class="marsXP trip-card" data-name="Uranus Uncharted" 
+     data-price="50000" 
+     data-region="outer">
 
-    <section class="marsXP">
-
+         
+     
         <div class="marsImg">
             <img src="../assets/img/flightUranus.png" alt="">
         </div>
@@ -367,10 +411,13 @@
             </div>
 
             <div class="booking">
-                <div class="quantity">
-                    <input type="button" value="  -     1" ><input type="button" value=" +">
-                </div>
-                <button>Book Now</button>
+  <div class="quantity">
+  <input type="button" class="decrease-manual" value="-">
+  <span class="manual-qty">1</span>
+  <input type="button" class="increase-manual" value="+">
+</div>
+
+                <button class="btn btn-primary book-now-btn" data-name="Uranus Uncharted" data-price="50000">Book Now</button>
             </div>
 
             <hr>
@@ -391,12 +438,17 @@
             </div>
 
         </div>
+       
 
     </section>
 
+    <!-- Moon trip -->
+    <section class="neptuneXP trip-card"  data-name="Moonlight Meander" 
+     data-price="15000" 
+     data-region="inner">
 
-    <section class="neptuneXP">
-
+       
+    
         <div class="neptuneImg">
             <img src="../assets/img/flightMoon.png" alt="">
         </div>
@@ -428,10 +480,13 @@
             </div>
 
             <div class="booking">
-                <div class="quantity">
-                    <input type="button" value="  -     1" ><input type="button" value=" +">
-                </div>
-                <button>Book Now</button>
+   <div class="quantity">
+  <input type="button" class="decrease-manual" value="-">
+  <span class="manual-qty">1</span>
+  <input type="button" class="increase-manual" value="+">
+</div>
+
+                <button class="btn btn-primary book-now-btn" data-name="Moonlight Meander" data-price="15000">Book Now</button>
             </div>
 
             <hr>
@@ -453,11 +508,9 @@
             
 
                 <div class="cartBtn">
-                <button>View Cart</button>
+                <button class="btn btn-outline-primary view-cart-btn">View Cart</button>
                 </div>
         </div>
-
-       
 
     </section>
 
@@ -467,6 +520,32 @@
     <i class="fa-solid fa-arrow-up"></i>
     
 </a>
+
+<!-- Modal checkout opener-->
+
+<div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content text-dark">
+      <div class="modal-header">
+        <h5 class="modal-title" id="checkoutModalLabel">Your Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul id="cart-items" class="list-group mb-3">
+          <!-- Items dynamically inserted here -->
+        </ul>
+        <div class="d-flex justify-content-between">
+          <h5>Total (ZAR):</h5>
+          <h5 id="cart-total">R 0</h5>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
+        <button type="button" class="btn btn-primary checkout-btn">Check Out</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- footer -->
 
